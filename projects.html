@@ -33,124 +33,160 @@
 
     <div class="project-grid">
 
-        <!-- PROJECT 1 -->
+        <!-- PROJECT 1 : ResearchChat-AI -->
         <div class="project-card">
             <a href="#project1">
-                <img src="images\Zomato.jpg" alt="Zomato Data Analysis">
+                <img src="images/ResearchChat.png" alt="ResearchChat-AI Hybrid RAG Assistant">
+                <h3>ResearchChat-AI</h3>
+            </a>
+        </div>
+
+        <!-- PROJECT 2 : House Price Prediction -->
+        <div class="project-card">
+            <a href="#project2">
+                <img src="images/HousePrice.png" alt="House Price Prediction">
+                <h3>House Price Prediction</h3>
+            </a>
+        </div>
+
+        <!-- PROJECT 3 : Loan Default Prediction -->
+        <div class="project-card">
+            <a href="#project3">
+                <img src="images/LoanDefault.png" alt="Loan Default Prediction">
+                <h3>Loan Default Prediction</h3>
+            </a>
+        </div>
+
+        <!-- PROJECT 4 : AI Career Advisor Chatbot -->
+        <div class="project-card">
+            <a href="#project4">
+                <img src="images/chatbot.png" alt="AI Career Advisor Chatbot">
+                <h3>AI Career Advisor Chatbot</h3>
+            </a>
+        </div>
+
+        <!-- PROJECT 5 : Flipkart Sentiment Analysis -->
+        <div class="project-card">
+            <a href="#project5">
+                <img src="images/flipkart SA.png" alt="Flipkart Sentiment Analysis">
+                <h3>Flipkart Sentiment Analysis</h3>
+            </a>
+        </div>
+
+        <!-- PROJECT 6 : Zomato Data Analysis -->
+        <div class="project-card">
+            <a href="#project6">
+                <img src="images/Zomato.jpg" alt="Zomato Data Analysis">
                 <h3>Zomato Data Analysis</h3>
             </a>
         </div>
 
-        <!-- PROJECT 2 -->
+        <!-- PROJECT 7 : Restaurant SQL Analytics -->
         <div class="project-card">
-            <a href="#project2">
-                <img src="images\Restaurant.jpg" alt="Restaurant SQL Analytics">
+            <a href="#project7">
+                <img src="images/Restaurant.jpg" alt="Restaurant SQL Analytics">
                 <h3>Restaurant SQL Analytics</h3>
             </a>
         </div>
-        <!-- PROJECT 3 -->
-        <div class="project-card">
-            <a href="#project3">
-                <img src="images\Telecom.jpeg" alt="Telecom Churn Analysis">
-                <h3>Telecom Churn Analysis</h3>
-            </a>
-        </div>
-        <!-- PROJECT 4  -->
-        <div class="project-card">
-            <a href="#project4">
-                <img src="images\flipkart DA.png" alt="Flipkart Data Analysis">
-                <h3>Flipkart Data Analysis</h3>
-            </a>
-        </div>
 
-        <!-- PROJECT 5 -->
+        <!-- PROJECT 8 : Flipkart Data Analysis -->
         <div class="project-card">
-            <a href="#project5">
-                <img src="images\flipkart SA.png" alt="Flipkart Sentiment Analysis">
-                <h3>Flipkart Sentiment Analysis</h3>
-            </a>
-        </div>
-        
-        <!-- PROJECT 6 -->
-        <div class="project-card">
-            <a href="#project6">
-                <img src="images\chatbot.png" alt="Career Advisory Chatbot">
-                <h3>Career Advisory Chatbot</h3>
+            <a href="#project8">
+                <img src="images/flipkart DA.png" alt="Flipkart Data Analysis">
+                <h3>Flipkart Data Analysis</h3>
             </a>
         </div>
 
     </div>
 </section>
 
-<!-- MODAL 1 -->
+<!-- MODAL 1 : ResearchChat-AI -->
 <div id="project1" class="project-modal">
     <div class="modal-box">
         <a href="#" class="close-btn">&times;</a>
-        <img src="images\Zomato.jpg" class="modal-img">
-        <h2><a href="https://github.com/kesavapavan13/EDA-project" target="_blank">Zomato Data Analysis</a></h2>
-        <p><strong>Tech Stack:</strong> Python, Pandas, Matplotlib, Seaborn</p>
+        <img src="images/ResearchChat.png" class="modal-img">
+        <!-- UPDATE: check this GitHub link matches your repo name -->
+        <h2><a href="https://github.com/kesavapavan13/ResearchChat-AI" target="_blank">ResearchChat-AI: Hybrid RAG Assistant</a></h2>
+        <p><strong>Tech Stack:</strong> Python | LangChain | FAISS | BM25 | Docling | Hugging Face Embeddings | Groq | Streamlit</p>
         <ul>
-            <li>Performed EDA with 20+ visualizations.</li>
-            <li>Discovered 12 insights improving food delivery trends.</li>
-            <li>Improved data quality using preprocessing techniques.</li>
+            <li>Built a hybrid RAG assistant that answers questions from uploaded research paper PDFs.</li>
+            <li>Parsed PDFs with Docling and split them into 1500-character chunks with 300-character overlap.</li>
+            <li>Embedded chunks with BAAI/bge-small-en and indexed them with FAISS (dense) and BM25 (sparse) search.</li>
+            <li>Combined both rankings using Reciprocal Rank Fusion (k=60) to retrieve the top 4 chunks.</li>
+            <li>Generated context-grounded answers with Groq-hosted gpt-oss-20b to reduce hallucinations.</li>
+            <li>Built a Streamlit app with multi-PDF upload, retrieved chunk inspection, and response-time tracking.</li>
         </ul>
-        
+        <!-- UPDATE: paste your Live Demo link in href -->
+        <a href="https://researchchat-ai-jqteqsghz5abukjwrttcfe.streamlit.app/" target="_blank">(Live App)</a>- see deployment in action!
     </div>
 </div>
 
-<!-- MODAL 2 -->
+<!-- MODAL 2 : House Price Prediction -->
 <div id="project2" class="project-modal">
     <div class="modal-box">
         <a href="#" class="close-btn">&times;</a>
-        <img src="images\Restaurant.jpg" class="modal-img">
-        <h2><a href="https://github.com/kesavapavan13/Restaurant-And-Consumer" target="_blank">Restaurant SQL Analytics</a></h2>
-        <p><strong>Tech Stack:</strong> SQL, MySQL, CTE, Subqueries</p>
+        <img src="images/HousePrice.png" class="modal-img">
+        <!-- UPDATE: check this GitHub link matches your repo name -->
+        <h2><a href="https://github.com/kesavapavan13/House-Price-Prediction" target="_blank">House Price Prediction</a></h2>
+        <p><strong>Tech Stack:</strong> Python | Pandas | NumPy | Scikit-learn | XGBoost | Streamlit | Joblib</p>
         <ul>
-            <li>Built 40+ optimized SQL queries.</li>
-            <li>Improved database performance by 30%.</li>
-            <li>Created analytics dashboards (views & CTEs).</li>
+            <li>Built an end-to-end regression pipeline on 187K+ Indian housing records.</li>
+            <li>Extracted BHK, carpet area, and floor details, and converted prices from Cr/Lac to Lakhs.</li>
+            <li>Applied outlier filtering and missing-value handling, then used ColumnTransformer with OrdinalEncoder and RobustScaler.</li>
+            <li>Compared Random Forest, Gradient Boosting, and XGBoost using 5-fold cross-validation.</li>
+            <li>Tuned XGBoost model achieved an R² score of 0.92.</li>
+            <li>Deployed a Streamlit app that loads the saved Joblib model and preprocessor for real-time price predictions.</li>
         </ul>
+        <!-- UPDATE: paste your Live Demo link in href -->
+        <a href="https://house-price-prediction-q4auqc5duqvldb8clz79q6.streamlit.app/" target="_blank">(Live App)</a>- see deployment in action!
     </div>
 </div>
 
-<!-- MODAL 3 -->
+<!-- MODAL 3 : Loan Default Prediction -->
 <div id="project3" class="project-modal">
     <div class="modal-box">
         <a href="#" class="close-btn">&times;</a>
-        <img src="images\Telecom.jpeg" class="modal-img">
-        <h2>
-            <a href="https://github.com/kesavapavan13/Telecom-Churn-Analysis" target="_blank">
-                Telecom Customer Churn Analysis
-            </a>
-        </h2>
-        <p><strong>Tech Stack:</strong> Power BI, DAX, Data Modeling</p>
+        <img src="images/LoanDefault.png" class="modal-img">
+        <!-- UPDATE: check this GitHub link matches your repo name -->
+        <h2><a href="https://github.com/kesavapavan13/Loan-Default-Risk-Prediction" target="_blank">Loan Default Prediction</a></h2>
+        <p><strong>Tech Stack:</strong> Python | Pandas | Scikit-learn | XGBoost | Imbalanced-learn | Streamlit | Joblib</p>
         <ul>
-            <li>Analyzed customer churn patterns and retention risks.</li>
-            <li>Built interactive Power BI dashboards.</li>
-            <li>Identified key churn drivers like contract type and tenure.</li>
+            <li>Built a binary classification model to predict loan default on 255K+ applicant records.</li>
+            <li>Handled a class-imbalanced target (about 11.6% defaults) using class weights and SMOTE experiments.</li>
+            <li>Preprocessed data with OrdinalEncoder and StandardScaler inside a ColumnTransformer.</li>
+            <li>Tuned Random Forest, XGBoost, and Logistic Regression using RandomizedSearchCV and GridSearchCV.</li>
+            <li>Evaluated with ROC-AUC, precision, recall, and F1-score, reaching a ROC-AUC of about 0.75.</li>
+            <li>Deployed a Streamlit app that shows the prediction along with default probability.</li>
         </ul>
+        <!-- UPDATE: paste your Live Demo link in href -->
+        <a href="https://loan-default-risk-prediction-ecopmwqbznjpgdsiabp9fg.streamlit.app/" target="_blank">(Live App)</a>- see deployment in action!
     </div>
 </div>
-<!-- MODAL 4 -->
+
+<!-- MODAL 4 : AI Career Advisor Chatbot -->
 <div id="project4" class="project-modal">
     <div class="modal-box">
         <a href="#" class="close-btn">&times;</a>
-        <img src="images\flipkart DA.png" class="modal-img">
-        <h2><a href="https://github.com/kesavapavan13/Flipkart_Data_analysis" target="_blank">Flipkart Data Analysis</a></h2>
-        <p><strong>Tech Stack:</strong> Python | Pandas | NumPy | Matplotlib | Seaborn</p>
+        <img src="images/chatbot.png" class="modal-img">
+        <h2><a href="https://github.com/kesavapavan13/AI-Career-Advisor-Chatbot" target="_blank">AI Career Advisor Chatbot</a></h2>
+        <p><strong>Tech Stack:</strong> Python | Streamlit | Google Gemini API | Prompt Engineering | Python-dotenv | Logging</p>
         <ul>
-            <li>Performed EDA on Flipkart product dataset.</li>
-            <li>Created 15+ visualizations to analyze pricing & ratings.</li>
-            <li>Extracted key business insights for product performance.</li>
-            <li>Applied data cleaning & preprocessing techniques.</li>
+            <li>Built a domain-specific career chatbot covering career paths, skill-gap analysis, learning roadmaps, and interview preparation.</li>
+            <li>Designed a modular backend that separates the UI, chatbot logic, prompt manager, Gemini client, memory manager, and logger.</li>
+            <li>Implemented multi-turn memory with history limiting and token optimization to prevent prompt overflow.</li>
+            <li>Added prompt guardrails to keep responses focused on career topics only.</li>
+            <li>Added response validation, exception handling, and persistent logging to track API calls and errors.</li>
+            <li>Stored API keys in environment variables and built a chat-style Streamlit interface.</li>
         </ul>
+        <a href="https://ai-career-advisor-chatbot-yvqwyymkfvqjrrazytkwqx.streamlit.app/" target="_blank">(Live App)</a>- see deployment in action!
     </div>
 </div>
-<!-- MODAL 5 -->
+
+<!-- MODAL 5 : Flipkart Sentiment Analysis -->
 <div id="project5" class="project-modal">
     <div class="modal-box">
         <a href="#" class="close-btn">&times;</a>
-        <img src="images\flipkart SA.png" class="modal-img">
+        <img src="images/flipkart SA.png" class="modal-img">
         <h2><a href="https://github.com/kesavapavan13/Flipkart_Sentiment_analysis" target="_blank">Flipkart Sentiment Analysis</a> </h2>
         <p><strong>Tech Stack:</strong> Python | Pandas | NLTK | Scikit-learn | TF-IDF | Streamlit | Joblib</p>
         <ul>
@@ -163,21 +199,50 @@
         <a href="https://flipkartsentimentanalysis-bw7sggwaa7esrksah7dzkq.streamlit.app/" target="_blank">(Live App)</a>- see deployment in action!
     </div>
 </div>
-<!-- MODAL 6 -->
+
+<!-- MODAL 6 : Zomato Data Analysis -->
 <div id="project6" class="project-modal">
     <div class="modal-box">
         <a href="#" class="close-btn">&times;</a>
-        <img src="images\chatbot.png" sizes="100*100" class="modal-img">
-        <h2><a href="https://github.com/kesavapavan13/AI-Career-Advisor-Chatbot" target="_blank">Career Advisory Chatbot</a></h2>
-        <p><strong>Tech Stack:</strong> Python | Streamlit | Google Gemini GenAI API | Python-dotenv | Logging</p>
+        <img src="images/Zomato.jpg" class="modal-img">
+        <h2><a href="https://github.com/kesavapavan13/EDA-project" target="_blank">Zomato Data Analysis</a></h2>
+        <p><strong>Tech Stack:</strong> Python, Pandas, Matplotlib, Seaborn</p>
         <ul>
-            <li>Built an AI-powered career advisor chatbot delivering personalized career recommendations.</li>
-            <li>Leveraged Gemini LLM for contextual, multi-turn conversational responses.</li>
-            <li>Secured API credentials using environment variables for production safety.</li>
-            <li>Implemented logging mechanisms to track system performance and errors.</li>
-            <li>Created an intuitive Streamlit UI for real-time career guidance interactions.</li>
+            <li>Performed EDA with 20+ visualizations.</li>
+            <li>Discovered 12 insights improving food delivery trends.</li>
+            <li>Improved data quality using preprocessing techniques.</li>
         </ul>
-        <a href="https://ai-career-advisor-chatbot-yvqwyymkfvqjrrazytkwqx.streamlit.app/" target="_blank">(Live App)</a>- see deployment in action!
+    </div>
+</div>
+
+<!-- MODAL 7 : Restaurant SQL Analytics -->
+<div id="project7" class="project-modal">
+    <div class="modal-box">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/Restaurant.jpg" class="modal-img">
+        <h2><a href="https://github.com/kesavapavan13/Restaurant-And-Consumer" target="_blank">Restaurant SQL Analytics</a></h2>
+        <p><strong>Tech Stack:</strong> SQL, MySQL, CTE, Subqueries</p>
+        <ul>
+            <li>Built 40+ optimized SQL queries.</li>
+            <li>Improved database performance by 30%.</li>
+            <li>Created analytics dashboards (views & CTEs).</li>
+        </ul>
+    </div>
+</div>
+
+<!-- MODAL 8 : Flipkart Data Analysis -->
+<div id="project8" class="project-modal">
+    <div class="modal-box">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/flipkart DA.png" class="modal-img">
+        <h2><a href="https://github.com/kesavapavan13/Flipkart_Data_analysis" target="_blank">Flipkart Data Analysis</a></h2>
+        <p><strong>Tech Stack:</strong> Python | Pandas | NumPy | Matplotlib | Seaborn</p>
+        <ul>
+            <li>Performed EDA on Flipkart product dataset.</li>
+            <li>Created 15+ visualizations to analyze pricing & ratings.</li>
+            <li>Extracted key business insights for product performance.</li>
+            <li>Applied data cleaning & preprocessing techniques.</li>
+        </ul>
     </div>
 </div>
 

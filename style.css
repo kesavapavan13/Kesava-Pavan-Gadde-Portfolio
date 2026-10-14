@@ -279,8 +279,10 @@ nav ul li a.active {
     color: #cfcfcf;
     margin-bottom: 14px;
 }
+
 /* ============================== */
-/* PROJECTS (GRID VIEW) */
+/* PROJECTS (GRID VIEW)           */
+/* 4 per row, glass boundary      */
 /* ============================== */
 
 .project-section {
@@ -288,21 +290,61 @@ nav ul li a.active {
     text-align: center;
 }
 
+/* 4 projects per row -> 8 projects = 2 rows */
 .project-grid {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* ✅ EXACTLY 3 PER ROW */
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
 }
 
-/* PROJECT CARD */
+/* PROJECT CARD (glass boundary) */
 .project-card {
     position: relative;
-    border-radius: 20px;
+    border-radius: 22px;
     overflow: hidden;
-    height: 280px;
+    height: 240px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.50),
+        0 0 22px rgba(30, 144, 255, 0.14);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Glass inner glow (soft light just inside the edge) */
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow:
+        inset 0 0 18px rgba(255, 255, 255, 0.12),
+        inset 0 1px 1px rgba(255, 255, 255, 0.35);
+}
+
+/* Glass rim (bright edge on corners, fading in the middle) */
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: inherit;
+    pointer-events: none;
+    padding: 1.5px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.75) 0%,
+        rgba(255, 255, 255, 0.08) 35%,
+        rgba(30, 144, 255, 0.28) 65%,
+        rgba(255, 255, 255, 0.55) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box exclude, linear-gradient(#fff 0 0);
 }
 
 /* CLICKABLE AREA */
@@ -326,23 +368,28 @@ nav ul li a.active {
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    transform: translateY(-6px);
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.60),
+        0 0 28px rgba(30, 144, 255, 0.28);
 }
 
 /* PROJECT TITLE */
 .project-card h3 {
     position: absolute;
-    bottom: 20px;
+    bottom: 14px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0,0,0,0.65);
-    padding: 10px 26px;
-    border-radius: 25px;
-    font-size: 18px;
+    width: calc(100% - 28px);
+    padding: 8px 10px;
+    border-radius: 16px;
+    font-size: 15px;
     font-weight: 600;
+    line-height: 1.3;
     color: #fff;
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
 }
 
 /* ============================== */
@@ -534,6 +581,7 @@ nav ul li a.active {
         padding: 25px;
     }
 }
+
 /* ============================== */
 /* CONTACT SECTION */
 /* ============================== */
@@ -606,8 +654,6 @@ nav ul li a.active {
     transform: translateY(-2px);
 }
 
-
-
 /* ===============================
    RESUME SECTION
 ================================= */
@@ -639,7 +685,6 @@ nav ul li a.active {
     color: #9ca3af;
     margin-bottom: 50px;
 }
-
 
 .resume-title {
     font-size: 1.5rem;
@@ -688,6 +733,9 @@ nav ul li a.active {
     transform: translateY(-3px);
 }
 
+/* ============================== */
+/* RESPONSIVE                     */
+/* ============================== */
 
 @media (max-width: 480px) {
 
@@ -705,8 +753,6 @@ nav ul li a.active {
         padding: 12px 24px;
     }
 }
-
-
 
 @media (max-width: 480px) {
 
@@ -777,9 +823,6 @@ nav ul li a.active {
     }
 }
 
-
-
-
 @media (max-width: 768px) {
 
     /* NAV */
@@ -827,8 +870,6 @@ nav ul li a.active {
     }
 }
 
-
-
 @media (max-width: 1024px) {
 
     /* HERO */
@@ -860,8 +901,6 @@ nav ul li a.active {
         padding: 100px 40px;
     }
 }
-
-
 
 @media (min-width: 1440px) {
 
